@@ -5,9 +5,6 @@ Vagrant.configure("2") do |config|
   # set the chef version
   config.omnibus.chef_version = :latest
 
-  # enable berkshelf
-  config.berkshelf.enabled = true
-
   config.vm.define "berkshelf-dev-vm" do |node|
     node.vm.hostname = "berkshelf-dev-vm"
     node.vm.box = "opscode_ubuntu-12.04_provisionerless"
