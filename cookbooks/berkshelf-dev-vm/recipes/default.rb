@@ -1,4 +1,8 @@
-include_recipe "apt"
+case node[:platform_family]
+when "ubuntu","debian"
+  include_recipe "apt"
+end
+
 include_recipe "xml"
 
 node[:berkshelf_dev_vm][:libarchive][:packages].each do |pkg|

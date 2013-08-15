@@ -7,8 +7,8 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "berkshelf-dev-vm" do |node|
     node.vm.hostname = "berkshelf-dev-vm"
-    node.vm.box = "opscode_ubuntu-12.04_provisionerless"
-    node.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_ubuntu-12.04_provisionerless.box"
+    node.vm.box = "opscode_centos-6.4_provisionerless"
+    node.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/opscode_centos-6.4_provisionerless.box"
 
     node.vm.synced_folder "../berkshelf", "/berkshelf"
 
